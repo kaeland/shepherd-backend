@@ -1,9 +1,6 @@
 # README
 
-### Where to Begin:
-
-#### Backend
-**Steps:**
+### **Steps (Backend):**
 1. Create routes for models (example):
   ```ruby
     get '/animals/count', to: 'animals#count'
@@ -36,6 +33,17 @@
     end
   end
   ```
+  * Can use a generator:
+  ```bash
+  rails g migration add_description_to_products description:string
+  ```
+  * User columns:
+    * first_name, last_name,  driver_id, destination_id, vehicle_id
+  * Destination columns:
+    *  name
+  * Vehicle
+    * color, make, model
+
 4. Create seed file (example):
   ```ruby
   p_winfield = Animal.create(name: 'Panther-Winfield', species: dog, gender: 'male')
@@ -71,8 +79,8 @@
   end
   ```
 6. Run ```rails s``` and check if json is displayed in browser
-
-#### Frontend
+___
+### **Steps (Frontend):**
 1. Create index.html file w/ minimal content
 2. Create src/index.js file
 3. Open index.html in browser and see if src/index.js works
