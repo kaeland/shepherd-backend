@@ -1,5 +1,5 @@
 class Driver < ApplicationRecord
-  has_many :destinations
-  has_many :riders, through: :destinations
+  belongs_to :destination 
+  has_many :riders
   has_one :vehicle 
 end
