@@ -10,27 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_29_223253) do
+ActiveRecord::Schema.define(version: 2018_12_30_090119) do
 
   create_table "destinations", force: :cascade do |t|
     t.string "name"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "drivers", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.integer "destination_id"
+    t.index ["destination_id"], name: "index_drivers_on_destination_id"
+  end
+
+  create_table "riders", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
     t.integer "driver_id"
-    t.integer "destination_id"
-    t.integer "vehicle_id"
-    t.index ["destination_id"], name: "index_users_on_destination_id"
-    t.index ["driver_id"], name: "index_users_on_driver_id"
-    t.index ["vehicle_id"], name: "index_users_on_vehicle_id"
+    t.index ["driver_id"], name: "index_riders_on_driver_id"
   end
 
   create_table "vehicles", force: :cascade do |t|
     t.string "color"
     t.string "make"
     t.string "model"
+    t.integer "driver_id"
+    t.index ["driver_id"], name: "index_vehicles_on_driver_id"
   end
 
 end
