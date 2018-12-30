@@ -79,6 +79,8 @@
   end
   ```
 6. Run ```rails s``` and check if json is displayed in browser
+7. Open [Postman](https://www.getpostman.com/) to mock/test POST requests to create actions in controllers
+8. Refactor routes.rb file to match controller actions being used
 ___
 ### **Steps (Frontend):**
 1. Create index.html file w/ minimal content
