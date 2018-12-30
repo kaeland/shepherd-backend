@@ -4,9 +4,6 @@ class CreateVehicles < ActiveRecord::Migration[5.2]
       t.string :color
       t.string :make
       t.string :model
-      t.references :driver
-
-      t.timestamps
     end
   end
 end
