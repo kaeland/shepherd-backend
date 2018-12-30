@@ -1,4 +1,3 @@
 class Rider < ApplicationRecord
-  has_many :destinations
-  has_many :drivers, through: :destinations
+  belongs_to :driver 
 end
