@@ -1,3 +1,4 @@
 class Vehicle < ApplicationRecord
-  has_many :users
+  belongs_to :driver
+  has_many :riders, through: :driver 
 end
