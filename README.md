@@ -85,3 +85,11 @@ ___
 2. Create src/index.js file
 3. Open index.html in browser and see if src/index.js works
 
+---
+Helpful Links:
+* [Disable CSRF protection](https://stackoverflow.com/questions/34251400/invalid-authenticity-token-on-post)
+  * This allowed me to use Postman to mock POST requests
+  * Without this, request to my API resulted in a status error similar to this:
+    * > ActionController::InvalidAuthenticityToken in  User::ProfileController#create_profile
+
+    
