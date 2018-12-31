@@ -20,6 +20,10 @@ class DriversController < ApplicationController
     render json: @driver
   end
 
+  def destroy
+    Driver.destroy(params[:id])
+  end
+
   def driver_params
     params.permit(:first_name, :last_name, :destination_id)
   end
