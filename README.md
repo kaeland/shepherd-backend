@@ -86,13 +86,13 @@
      * Actions: index, show, create  
   * DriversController:
      * File: drivers_controller.rb
-     * Actions: index, show, create, update
+     * Actions: index, show, create, update, destroy
   * RidersController:
      * File: riders_controller.rb
-     * Actions: index, show, create, update
+     * Actions: index, show, create, update, destroy
   * VehiclesController
      * File: vehicles_controller.rb
-     * Actions: index, show, create, update
+     * Actions: index, show, create, update, destroy
 ---
 6. Run ```rails s``` and check if json is displayed in browser
 7. Open [Postman](https://www.getpostman.com/) to mock/test POST requests to create actions in controllers
