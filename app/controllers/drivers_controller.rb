@@ -1,6 +1,6 @@
 class DriversController < ApplicationController
   def index
-    @drivers = Drivers.all 
+    @drivers = Driver.all 
     render json: @drivers 
   end
 
