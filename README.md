@@ -92,7 +92,8 @@
      * Actions: index, show, create, update, destroy
   * VehiclesController
      * File: vehicles_controller.rb
-     * Actions: index, show, create, update, destroy
+     * Actions: index, show, create, update
+        * **Note:** vehicles are deleted only when a driver is deleted. In this app drivers have only one vehicle. 
 ---
 6. Run ```rails s``` and check if json is displayed in browser
 7. Open [Postman](https://www.getpostman.com/) to mock/test POST requests to create actions in controllers
