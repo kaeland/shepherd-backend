@@ -107,6 +107,7 @@ Rails.application.routes.draw do
 
 end
 ```
+9. Merge branch with master.
 ___
 ### **Steps (Frontend):**
 1. Create index.html file w/ minimal content
