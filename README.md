@@ -51,6 +51,7 @@
   charlie = Animal.create(name: 'Charlie', species: dolphin, gender: 'male')
   eunice = Animal.create(name: 'Eunice', species: ferret, gender: 'female')
   ```
+  ---
 5. Create controller files for models (example):
   ```ruby
   class AnimalsController < ApplicationController
@@ -78,9 +79,33 @@
     end
   end
   ```
+  **Controllers:**
+
+  * DestinationsController:
+     * File: destinations_controller.rb
+     * Actions: index, show, create  
+  * DriversController:
+     * File: drivers_controller.rb
+     * Actions: index, show, create, update
+  * RidersController:
+     * File: riders_controller.rb
+     * Actions: index, show, create, update
+  * VehiclesController
+     * File: vehicles_controller.rb
+     * Actions: index, show, create, update
+---
 6. Run ```rails s``` and check if json is displayed in browser
 7. Open [Postman](https://www.getpostman.com/) to mock/test POST requests to create actions in controllers
-8. Refactor routes.rb file to match controller actions being used
+8. Refactor routes.rb file to match controller actions being used (example):
+```ruby
+Rails.application.routes.draw do
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  get '/animals/count', to: 'animals#count'
+  resources :animals, only: [:show, :index, :create]
+
+end
+```
 ___
 ### **Steps (Frontend):**
 1. Create index.html file w/ minimal content
