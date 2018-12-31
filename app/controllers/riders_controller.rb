@@ -20,6 +20,10 @@ class RidersController < ApplicationController
     render json: @rider 
   end
 
+  def destroy
+    Rider.destroy(params[:id])
+  end
+
   def rider_params
     params.permit(:first_name, :last_name, :driver_id)
   end
