@@ -112,7 +112,21 @@ ___
 ### **Steps (Frontend):**
 1. Create index.html file w/ minimal content
 2. Create src/index.js file
+    * Include index.js in script tag
+    * Append child element to body tag
 3. Open index.html in browser and see if src/index.js works
+4. Render destinations with fetch request
+5. Review [Bulma.io](https://bulma.io/) 
+    * Take the [Bulma Scrimba course](https://scrimba.com/g/gbulma)
+    * Determine what components you'll use for the app
+6. Mock app layout
+    * Use credit card as tool 
+7. Create app. 
+    * Add Bulma CSS with CDN 
+8. Use Google Places API to fetch churches (destinations).
+    * Read the Google Places API [docs](https://developers.google.com/places/web-service/intro)
+    * Render those searched churches to the screen
+9. Allow a destination to be saved to database. 
 
 ---
 Helpful Links:
